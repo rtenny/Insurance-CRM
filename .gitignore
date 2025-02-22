@@ -1,0 +1,14 @@
+# Ignore system files
+.env
+.env.*   # If you have multiple environment files
+
+# Ignore local environment, caches, and logs
+writable/cache/*
+writable/logs/*
+
+# Ignore Composer dependencies if you prefer not to commit vendor
+vendor/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db

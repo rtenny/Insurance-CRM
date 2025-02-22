@@ -10,10 +10,11 @@ class AuthController extends Controller
     // Show registration form OR process registration
     public function register()
     {
+
         helper(['form']); // Enable form helper (for set_value() etc.)
         $data = [];
 
-        if ($this->request->getMethod() === 'post') {
+        if ($this->request->getMethod() === 'POST') {            
             // Define validation rules
             $rules = [
                 'username' => 'required|min_length[3]|max_length[20]',
@@ -21,12 +22,13 @@ class AuthController extends Controller
                 'password' => 'required|min_length[6]',
                 'password_confirm' => 'required|matches[password]',
             ];
-
+            
             if (!$this->validate($rules)) {
                 // Validation failed
                 $data['validation'] = $this->validator;
             } else {
                 // Validation passed, create new user
+                
                 $userModel = new UserModel();
                 $newUserData = [
                     'username'      => $this->request->getPost('username'),
@@ -51,7 +53,7 @@ class AuthController extends Controller
         helper(['form']);
         $data = [];
 
-        if ($this->request->getMethod() === 'post') {
+        if ($this->request->getMethod() === 'POST') {
             // Define validation rules
             $rules = [
                 'email'    => 'required|valid_email',

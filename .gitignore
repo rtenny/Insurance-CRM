@@ -16,3 +16,5 @@ vendor/
 Thumbs.db
 
 public/adminlte/*
+package-lock.json
+package.json

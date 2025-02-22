@@ -5,6 +5,8 @@
 # Ignore local environment, caches, and logs
 writable/cache/*
 writable/logs/*
+writable/session/*
+writable/debugbar/*
 
 # Ignore Composer dependencies if you prefer not to commit vendor
 vendor/

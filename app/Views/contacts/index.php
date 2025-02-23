@@ -42,10 +42,7 @@ Contacts
     </div>
 </div>
 
-<!-- DataTables Script -->
-<script src="<?= base_url('adminlte/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
-<script src="<?= base_url('adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
-
+<?= $this->section('scripts') ?>
 <script>
     $(document).ready(function () {
         $('#contactsTable').DataTable({
@@ -56,5 +53,6 @@ Contacts
         });
     });
 </script>
+<?= $this->endSection() ?>
 
 <?= $this->endSection() ?>

@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="<?= base_url('adminlte/dist/css/adminlte.min.css') ?>">
   <!-- Optionally include the AdminLTE dependencies like FontAwesome, Ionicons, or Google Fonts here -->
   <link rel="stylesheet" href="<?= base_url('adminlte/plugins/fontawesome-free/css/all.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('adminlte/plugins/fontawesome-free/css/all.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') ?>">
 </head>
 <body class="hold-transition layout-top-nav">
 <!-- Wrapper -->
@@ -32,7 +34,15 @@
 
 <!-- Required Scripts -->
 <script src="<?= base_url('adminlte/plugins/jquery/jquery.min.js') ?>"></script>
+<!-- DataTables Script -->
+<script src="<?= base_url('adminlte/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
+<script src="<?= base_url('adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
+
+<!-- admin LTE scripot-->
 <script src="<?= base_url('adminlte/dist/js/adminlte.min.js') ?>"></script>
+
+
+
 <!-- Add other plugin scripts if you’re using them -->
 </body>
 </html>

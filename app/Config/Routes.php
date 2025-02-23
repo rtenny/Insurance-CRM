@@ -19,16 +19,9 @@ $routes->post('login', 'AuthController::login');
 
 $routes->get('logout', 'AuthController::logout');
 
-$routes->get('contacts', 'ContactsController::index');
-
-/*
-// Optionally, add a /dashboard route to test successful login:
-$routes->get('dashboard', function () {
-    if (!session()->get('loggedIn')) {
-        return redirect()->to('/login');
-    }
-    // Render a view or display a simple message
-    echo "Welcome to the Dashboard, " . session()->get('username') . "!";
-});
-*/
-
+$routes->get('contacts', 'ContactsController::index');  // View all contacts
+$routes->get('contacts/create', 'ContactsController::create');  // Show create form
+$routes->post('contacts/store', 'ContactsController::store');  // Handle form submission
+$routes->get('contacts/edit/(:num)', 'ContactsController::edit/$1');  // Show edit form
+$routes->post('contacts/update/(:num)', 'ContactsController::update/$1');  // Handle update
+$routes->get('contacts/delete/(:num)', 'ContactsController::delete/$1');  // Delete contact

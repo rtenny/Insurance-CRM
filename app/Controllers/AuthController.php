@@ -50,6 +50,7 @@ class AuthController extends Controller
     // Show login form OR process login
     public function login()
     {
+        $session = session();
         helper(['form']);
         $data = [];
 
@@ -72,7 +73,11 @@ class AuthController extends Controller
                     $pass = $this->request->getPost('password');
                     if (password_verify($pass, $user['password_hash'])) {
                         // Password correct, set up session
-                        $this->setUserSession($user);
+                        $session->set([
+                            'user_id'   => $user['id'],
+                            'email'     => $user['email'],
+                            'logged_in' => true, 
+                        ]);
                         return redirect()->to('/dashboard')->with('success', 'Welcome back!');
                     } else {
                         $data['error'] = 'Invalid password.';

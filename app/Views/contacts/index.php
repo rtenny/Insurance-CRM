@@ -5,6 +5,11 @@ Contacts
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
+<div class="mb-3">
+    <a href="<?= base_url('contacts/create') ?>" class="btn btn-success">
+        <i class="fas fa-plus"></i> Add Contact
+    </a>
+</div>
 
 <div class="container mt-4">
     <div class="card">

@@ -89,7 +89,7 @@ class AuthController extends Controller
     private function setUserSession(array $user)
     {
         $data = [
-            'id'       => $user['id'],
+            'user_id'       => $user['id'],
             'username' => $user['username'],
             'email'    => $user['email'],
             'loggedIn' => true, // Flag to check user is logged in

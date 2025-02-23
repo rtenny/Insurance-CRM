@@ -6,20 +6,17 @@
   <!-- AdminLTE CSS -->
   <link rel="stylesheet" href="<?= base_url('adminlte/dist/css/adminlte.min.css') ?>">
   <!-- Optionally include the AdminLTE dependencies like FontAwesome, Ionicons, or Google Fonts here -->
-  <!-- e.g., <link rel="stylesheet" href="<?= base_url('adminlte/plugins/fontawesome-free/css/all.min.css') ?>"> -->
+  <link rel="stylesheet" href="<?= base_url('adminlte/plugins/fontawesome-free/css/all.min.css') ?>">
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition layout-top-nav">
 <!-- Wrapper -->
 <div class="wrapper">
 
   <!-- Navbar -->
   <?= $this->include('partials/navbar') ?>
 
-  <!-- Main Sidebar Container -->
-  <?= $this->include('partials/sidebar') ?>
-
   <!-- Content Wrapper -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="margin-left: 0;">
     <!-- Main Content -->
     <section class="content">
       <div class="container-fluid">

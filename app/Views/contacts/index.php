@@ -5,7 +5,7 @@ Contacts
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
-<div class="mb-3">
+<div class="d-flex justify-content-end mb-3">
     <a href="<?= base_url('contacts/create') ?>" class="btn btn-success">
         <i class="fas fa-plus"></i> Add Contact
     </a>
@@ -32,6 +32,11 @@ Contacts
                 <tbody>
                     <?php foreach ($contacts as $contact) : ?>
                         <tr>
+                            <td>
+                                <a href="<?= base_url('contacts/edit/' . $contact['id']) ?>" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                            </td>                            
                             <td><?= esc($contact['id']) ?></td>
                             <td><?= esc($contact['name']) ?></td>
                             <td><?= esc($contact['surname']) ?></td>

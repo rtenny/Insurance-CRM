@@ -10,6 +10,11 @@ class AuthController extends Controller
     // Show registration form OR process registration
     public function register()
     {
+        // Check if user is logged in
+        $session = session();
+        if (!$session->has('user_id')) {
+            return redirect()->to('/login')->with('error', 'You must be logged in to access this page.');
+        }
 
         helper(['form']); // Enable form helper (for set_value() etc.)
         $data = [];
@@ -40,7 +45,7 @@ class AuthController extends Controller
                 $userModel->save($newUserData);
 
                 // Optionally, redirect to login with a success message
-                return redirect()->to('/login')->with('success', 'Registration successful! You can now log in.');
+                return redirect()->to('/login')->with('success', 'Registrung erfolgreich! Du kannst dich jetzt einloggen.');
             }
         }
 

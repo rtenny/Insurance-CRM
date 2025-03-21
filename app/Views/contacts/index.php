@@ -7,7 +7,7 @@ Contacts
 <?= $this->section('content') ?>
 <div class="d-flex justify-content-end mb-3">
     <a href="<?= base_url('contacts/create') ?>" class="btn btn-success">
-        <i class="fas fa-plus"></i> Add Contact
+        <i class="fas fa-plus"></i> Kontakt hinzufügen
     </a>
 </div>
 
@@ -20,6 +20,7 @@ Contacts
             <table id="contactsTable" class="table table-bordered table-hover">
                 <thead>
                     <tr>
+                        <th>&nbsp;</th>
                         <th>ID</th>
                         <th>Name</th>
                         <th>Surname</th>

@@ -9,7 +9,7 @@
             <a href="/" class="h1"><b>Vitalia</b>CRM</a>
         </div>
         <div class="card-body">
-            <p class="login-box-msg">Neues Konto registrieren</p>
+            <p class="login-box-msg">Neues Konto anlegen</p>
 
             <?php if (isset($validation)) : ?>
                 <div class="alert alert-danger">
@@ -57,10 +57,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-6">
                         <a href="/login" class="text-center">Ich habe schon ein Konto</a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                         <button type="submit" class="btn btn-primary btn-block">Konto anlegen</button>
                     </div>
                 </div>
